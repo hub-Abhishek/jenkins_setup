@@ -1,0 +1,75 @@
+sudo su –
+
+sudo wget -O /etc/yum.repos.d/jenkins.repo https://pkg.jenkins.io/redhat-stable/jenkins.repo
+sudo rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io.key
+
+yum install fontconfig java-11-openjdk
+sudo amazon-linux-extras install java-openjdk11
+
+yum install jenkins
+service jenkins status
+service jenkins start
+
+cat /var/lib/jenkins/secrets/initialAdminPassword
+uptime
+
+yum install git
+git --version
+
+whereis git
+   29  clear
+   30  cd /var/lib/jenkins/workspace
+   31  ll
+   32  cd HelloWorldJob/
+   33  ll
+   34  cd ..
+   35  cd PullCodeFromGitHub/
+   36  ll
+   37  cd ..
+   38  clear
+   39  cd
+   40  cd /opt
+   41  ll
+   42  ls
+   43  clear
+   44  wget https://dlcdn.apache.org/maven/maven-3/3.8.6/binaries/apache-maven-3.8.6-bin.tar.gz
+   45  tar -xvzf apache-maven-3.8.6-bin.tar.gz 
+   46  clear
+   47  ll
+   48  mv apache-maven-3.8.6 maven
+   49  cd maven
+   50  ls
+   51  cd bin
+   52  mvn -v
+   53  .mvn -v
+   54  ./mvn -v
+   55  cd ..
+   56  cd
+   57  pwd
+   58  ll -a
+   59  vi .bash_profile 
+   60  echo $PATH
+   61  source .bash_profile
+   62  echo $PATH
+   63  vi .bash_profile 
+   64  mvn -v
+   65  python
+   66  clear
+   67  mvn -v
+   68  echo $PATH
+   69  vi .bash_profile 
+   70  source .bash_profile
+   71  echo $PATH
+   72  mvn
+   73  mvn -v
+   74  clear
+   75  cd var/lib/
+   76  cd /var/lib/jenkins/
+   77  ll
+   78  cd workspace/
+   79  ll
+   80  cd FirstMavenProject/
+   81  ll
+   82  cd ..
+   83  history
+   84  history> jenkins_history.txt

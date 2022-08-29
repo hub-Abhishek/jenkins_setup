@@ -1,0 +1,48 @@
+    1    yum install fontconfig java-11-openjdk
+    2  java --version
+    3  java -version
+    4  sudo amazon-linux-extras install java-openjdk11
+    5  wget https://dlcdn.apache.org/tomcat/tomcat-8/v8.5.82/bin/apache-tomcat-8.5.82.tar.gz
+    6  tar -xvzf apache-tomcat-8.5.82.tar.gz 
+    7  ll
+    8  rm -rf apache-tomcat-8.5.82
+    9  rm -rf apache-tomcat-8.5.82.tar.gz 
+   10  ll
+   11  cd /opt
+   12  ll
+   13  wget https://dlcdn.apache.org/tomcat/tomcat-8/v8.5.82/bin/apache-tomcat-8.5.82.tar.gz
+   14  tar -xvzf apache-tomcat-8.5.82.tar.gz 
+   15  ll
+   16  mv apache-tomcat-8.5.82 tomcat
+   17  ll
+   18  cd tomcat/
+   19  ll
+   20  cd bin
+   21  ll
+   22  ./startup.sh 
+   23  cd ..
+   24  find / name context.xml
+   25  find / -name context.xml
+   26  vi /opt/tomcat/webapps/host-manager/META-INF/context.xml
+   27  vi /opt/tomcat/webapps/manager/META-INF/context.xml
+   28  ll
+   29  cd bin
+   30  ll
+   31  ./shutdown.sh 
+   32  ./startup.sh 
+   33  ll
+   34  cd ..
+   35  ll
+   36  cd conf
+   37  ll
+   38  vi tomcat-users.xml 
+   39  ln -s /opt/tomcat/bin/startup.sh /usr/local/bin/tomcatup
+   40  ln -s /opt/tomcat/bin/shutdown.sh /usr/local/bin/tomcatdown
+   41  tomcatdown
+   42  tomcatup 
+   43  cd
+   44  history > tomcat_history.txt
+   45  pwd
+   46  rm tomcat_history.txt 
+   47  cd /home/ec2-user/
+   48  history > tomcat_history.txt
