@@ -1,1 +1,1 @@
-python3 hello_world.py
+RUN echo hello world
