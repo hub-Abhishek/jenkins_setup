@@ -1,25 +1,27 @@
+def gv
+
 pipeline {
     agent any
-
+    parameters {
+        choice(name: 'VERSION', choices: ['1.1.0', '1.2.0', '1.3.0'], description: '')
+        booleanParam(name: 'executeTests', defaultValue: true, description: '')
+    }
     stages {
-        stage ('Compile Stage') {
+        stage("init") {
             steps {
-                echo 'Compile Stage Complete'
+                echo 'stage 1'
             }
         }
-
-        stage   ('Testing Stage') {
+        stage("build") {
             steps {
+                echo 'stage 2'
                 python3 hello_world.py
-                echo 'Testing Stage Complete'
             }
         }
-
-        stage ('Build Stage Complete') {
+        stage("deploy") {
             steps {
-                echo 'Build Stage Complete'
+                echo 'stage 3'
             }
         }
-
     }
 }
